@@ -1,9 +1,9 @@
 export default function Profile(props) {
   return (
     <>
-      <table className="profile">
+      <table className="profile" border={1} width="100%">
         <tr>
-          <td rowspan={5}>
+          <td rowspan={7}>
             <img
               src={require("../assets/profilepic/" + props.stu.profilePic)}
               alt="Image"
