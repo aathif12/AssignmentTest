@@ -1,5 +1,5 @@
 import Profile from "./profile.js";
-import useState from "react";
+import { useState } from "react";
 export default function StudentTable(props) {
   const [stu, setStu] = useState(props.students[0]);
   return (
@@ -21,6 +21,7 @@ export default function StudentTable(props) {
                 <td>{student.address.country}</td>
                 <td>
                   <button
+                    id={student.studentId}
                     onClick={() => {
                       setStu(student);
                     }}
@@ -35,7 +36,7 @@ export default function StudentTable(props) {
         </table>
       </div>
       <div className="rightDiv">
-        <Profile student={stu} />
+        <Profile stu={stu} />
       </div>
     </>
   );
